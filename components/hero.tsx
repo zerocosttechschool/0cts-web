@@ -17,8 +17,8 @@ export function Hero() {
               Innovation Queue
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-              If you're interested in our vision and mission, drop your email to
-              be the first to know about exciting updates!
+              If you&apos;re interested in our vision and mission, drop your
+              email to be the first to know about exciting updates!
             </p>
           </div>
           <div className="w-full max-w-sm space-y-2">
