@@ -24,11 +24,11 @@ export function WaitList() {
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-              Let&apos;s Contribute!
+              Yuk berkontribusi!
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-              If you&apos;re interested in our vision and mission, drop your
-              email to be the first to know about exciting updates!
+              Jika kamu tertarik pada visi dan misi kami, tulis email kamu untuk
+              jadi orang pertama yang tau kalau kita lagi ada update terbaru!
             </p>
           </div>
           <div className="w-full max-w-sm space-y-4">
@@ -41,7 +41,7 @@ export function WaitList() {
                     <FormItem>
                       <FormControl>
                         <Input
-                          className="max-w-lg flex-1 text-center"
+                          className="max-w-lg flex-1 text-center text-black"
                           placeholder="Enter your email address..."
                           type="email"
                           isError={!!errors.email}
@@ -53,28 +53,29 @@ export function WaitList() {
                   )}
                 />
                 <Button
-                  className="bg-[#2F4F4F] text-white mt-2 w-full"
+                  className="bg-white text-black mt-2 w-full"
                   type="submit"
                   isLoading={isSubmitting}
+                  variant={"secondary"}
                 >
-                  Submit
+                  Kirim
                 </Button>
               </form>
             </Form>
             <p className="text-xs text-gray-500 dark:text-gray-400">
-              You can read the details here :
+              Kamu bisa membaca detailnya disini :
             </p>
           </div>
           <div className="w-full max-w-sm space-y-2">
-            <Button variant="outline">
+            <Button variant="secondary">
               <Link
                 className="flex items-center space-x-2"
                 download
                 target="_blank"
                 href={PDF_PROJECT_PROFILE}
               >
-                <DownloadIcon className="w-4 h-4" />
-                <span>Download PDF</span>
+                <DownloadIcon className="w-4 h-4 text-black" />
+                <span className="text-black">Download PDF</span>
               </Link>
             </Button>
           </div>
