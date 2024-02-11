@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Image from 'next/image';
-import { GitCommit, Location, BrandGithub } from "@mynaui/icons-react";
+import { GitCommit, Location, BrandGithub, Users } from "@mynaui/icons-react";
 
 async function Kontributor() {
 
@@ -37,6 +37,13 @@ async function Kontributor() {
                         )
                     })
                 }
+            </div>
+            <div className='flex items-center justify-center'>
+                <a href="https://github.com/zerocosttechschool/0cts-curriculum" target='_blank' rel='noreferrer'>
+                    <button className='bg-[#1e293b] py-4 px-7 rounded-full flex items-center justify-center gap-2 text-white hover:scale-105 duration-200 ease-in-out'>
+                        Join Project <Users />
+                    </button>
+                </a>
             </div>
         </div>
     )
