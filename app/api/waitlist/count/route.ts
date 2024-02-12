@@ -1,4 +1,4 @@
-import { brevoAPI } from "@/app/lib/api";
+import { brevoAPI } from "@/lib/api";
 import { NextResponse } from "next/server";
 
 export async function GET() {
