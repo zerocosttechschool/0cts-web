@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { clientAPI } from "@/app/lib/api";
+import { clientAPI } from "@/lib/api";
 
 const countWaitList = async () => {
   const { data } = await clientAPI.get(`/waitlist/count`);

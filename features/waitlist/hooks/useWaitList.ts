@@ -1,5 +1,5 @@
-import { useToast } from "@/app/components/ui/use-toast";
-import { useCreateWaitList } from "@/app/services/waitlist/hooks/useCreateWaitList";
+import { useToast } from "@/components/ui/use-toast";
+import { useCreateWaitList } from "@/services/waitlist/hooks/useCreateWaitList";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
