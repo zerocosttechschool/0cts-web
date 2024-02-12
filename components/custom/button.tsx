@@ -8,7 +8,6 @@ interface Props
   children?: React.ReactNode;
   isLoading?: boolean;
 }
-
 export function Button({ children, isLoading, ...props }: Props) {
   return (
     <UIButton disabled={isLoading} {...props}>
