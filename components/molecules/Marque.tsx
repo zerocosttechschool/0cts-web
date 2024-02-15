@@ -1,8 +1,8 @@
+import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
 
 interface MarqueeProps {
-  children: React.ReactNode;
   direction?: "left" | "right" | "up" | "down";
   gradient?: boolean;
   gradientColor?: string;
@@ -11,8 +11,10 @@ interface MarqueeProps {
   className?: string;
 }
 
-export const Marque: React.FC<MarqueeProps> = ({
-  children,
+const MARQUEE_ITEMS = 10;
+const IMAGE_SIZE = 25;
+
+export const Marque = ({
   direction = "left",
   gradient = false,
   gradientColor = "black",
@@ -29,7 +31,14 @@ export const Marque: React.FC<MarqueeProps> = ({
       direction={direction}
       className={className}
     >
-      {children}
+      {Array(MARQUEE_ITEMS)
+        .fill(Math.random())
+        .map((_, index) => (
+          <div key={`marquee-item-${index}`} className="flex justify-evenly gap-3">
+            <p className="ml-5">ZERO COST TECH SCHOOL</p>
+            <Image src={"/images/star.svg"} width={IMAGE_SIZE} height={IMAGE_SIZE} alt="star" />
+          </div>
+        ))}
     </Marquee>
   );
 };

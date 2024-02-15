@@ -39,11 +39,11 @@ interface Footer {
   className?: string;
 }
 
-export const Footer: React.FC<Footer> = ({ data, className }) => {
+const Footer: React.FC<Footer> = ({ data, className }) => {
   return (
     <>
-      <div className='flex justify-between items-start'>
-        <div className='flex flex-col gap-2'>
+      <div className="flex items-start justify-between">
+        <div className="flex flex-col gap-2">
           <div
             style={{
               borderStyle: "solid",
@@ -51,13 +51,8 @@ export const Footer: React.FC<Footer> = ({ data, className }) => {
               borderImage: "linear-gradient(90deg, #0A0A0A 0%, #A3A3A3 100%)",
             }}
           >
-            <div className='flex gap-5 justify-center items-center'>
-              <Image
-                src={"/logo.png"}
-                width={100}
-                height={100}
-                alt='Footer 0CTS'
-              />
+            <div className="flex items-center justify-center gap-5">
+              <Image src={"/logo.png"} width={100} height={100} alt="Footer 0CTS" />
             </div>
           </div>
         </div>
@@ -65,3 +60,5 @@ export const Footer: React.FC<Footer> = ({ data, className }) => {
     </>
   );
 };
+
+export default Footer;

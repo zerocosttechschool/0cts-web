@@ -1,6 +1,6 @@
 import { BrandGithub, GitCommit, Location } from "@mynaui/icons-react";
 import Image from "next/image";
-import { fetchUser } from "../utils/fetchContributors";
+import { fetchUser } from "../lib/fetchContributors";
 
 export default async function CardContributors({
   name,

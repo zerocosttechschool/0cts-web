@@ -1,15 +1,12 @@
-import React from "react";
-
 import CardContributors from "@/components/card-contributors";
 import { Users } from "@mynaui/icons-react";
-import { fetchContributors } from "@/utils/fetchContributors";
+import { fetchContributors } from "@/lib/fetchContributors";
 
-async function Kontributor() {
+export default async function Contributors() {
   let kontributor: Array<Record<string, unknown>> = [];
   const contributors1 = await fetchContributors(`${process.env.GITHUB_REPO_PROFILE}`);
   const contributors2 = await fetchContributors(`${process.env.GITHUB_REPO_DOCS}`);
   kontributor = [...contributors1, ...contributors2];
-
   kontributor = kontributor.filter(
     (item, index, self) => index === self.findIndex(t => t.id === item.id),
   );
@@ -51,5 +48,3 @@ async function Kontributor() {
     </div>
   );
 }
-
-export default Kontributor;

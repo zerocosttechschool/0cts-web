@@ -9,6 +9,7 @@ async function fetchContributors(url: string): Promise<Array<Record<string, unkn
   });
 
   const contributors = await response.json();
+
   return contributors;
 }
 

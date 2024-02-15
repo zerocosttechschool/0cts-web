@@ -1,10 +1,10 @@
 import { Navbar } from "@/components/Navbar";
-import { SectionHero } from "@/components/sectionHero";
+import { SectionHero } from "@/components/organisms/Hero";
 
 export const LandingPage = () => {
   return (
     <>
-      <div className='bg-white h-screen overflow-hidden max-h-[730px]'>
+      <div className="h-screen max-h-[730px] overflow-hidden bg-white">
         <Navbar />
         <SectionHero />
       </div>

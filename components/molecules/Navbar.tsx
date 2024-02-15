@@ -15,13 +15,13 @@ interface NavbarProps {
 export const Navbar = ({ className, dataLink }: NavbarProps) => {
   return (
     <>
-      <div className={cn(`container mx-auto w-full max-w-7xl '`, className)}>
-        <div className='flex justify-between items-center py-4'>
-          <div className='flex text-black gap-2 justify-center items-center'>
-            <Image height={25} width={25} src='/logo.png' alt='0CT LOGO' />
-            <span className='font-bold text-lg'>0CTS</span>
+      <div className={cn(`' container mx-auto w-full max-w-7xl`, className)}>
+        <div className="flex items-center justify-between py-4">
+          <div className="flex items-center justify-center gap-2 text-black">
+            <Image height={25} width={25} src="/images/logo.png" alt="0CT LOGO" />
+            <span className="text-lg font-bold">0CTS</span>
           </div>
-          <div className='flex text-black gap-5'>
+          <div className="flex gap-5 text-black">
             {dataLink?.map((item, index) => (
               <Link key={index} href={`${item.link}`}>
                 {item.title}
