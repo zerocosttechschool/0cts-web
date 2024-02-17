@@ -1,9 +1,10 @@
 import CardContributors from "@/components/card-contributors";
-import { Users } from "@mynaui/icons-react";
 import { fetchContributors } from "@/lib/fetchContributors";
+import { Users } from "@mynaui/icons-react";
 
 export default async function Contributors() {
-  let kontributor: Array<Record<string, unknown>> = [];
+  
+  let kontributor: Array<Record<string, any>> = [];
   const contributors1 = await fetchContributors(`${process.env.GITHUB_REPO_PROFILE}`);
   const contributors2 = await fetchContributors(`${process.env.GITHUB_REPO_DOCS}`);
   kontributor = [...contributors1, ...contributors2];

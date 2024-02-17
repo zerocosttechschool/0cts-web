@@ -27,7 +27,6 @@ const SectionHero = () => {
               <span>Mulai Belajar Sekarang</span> <CgLoadbarDoc size={25} />
             </Button>
           </div>
-
           <div className="relative flex h-full  w-full items-start justify-center  bg-white py-24 ">
             <Image className="z-20" width={300} height={300} alt="gatau" src="/images/logo.png" />
             <Image
