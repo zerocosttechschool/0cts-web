@@ -4,78 +4,46 @@
  */
 import { Button } from "@/components/atoms/button";
 import { Input } from "@/components/atoms/ui/input";
-import { PDF_PROJECT_PROFILE } from "@/constants/general";
+
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/atoms/ui/form";
-import Link from "next/link";
+
 import { useWaitList } from "../hooks/useWaitList";
 
 export function WaitList() {
   const { onSubmit, isSubmitting, form, errors } = useWaitList();
 
   return (
-    <main className="w-full py-12 md:py-24 lg:py-32">
-      <div className="px-4 md:px-6">
-        <div className="flex flex-col items-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-              Yuk berkontribusi!
-            </h1>
-            <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-              Jika kamu tertarik pada visi dan misi kami, tulis email kamu untuk jadi orang pertama
-              yang tau kalau kita lagi ada update terbaru!
-            </p>
-          </div>
-          <div className="w-full max-w-sm space-y-4">
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)}>
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          className="max-w-lg flex-1 text-center text-black"
-                          placeholder="Enter your email address..."
-                          type="email"
-                          isError={!!errors.email}
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button
-                  className="mt-2 w-full bg-white text-black"
-                  type="submit"
-                  isLoading={isSubmitting}
-                  variant={"secondary"}
-                >
-                  Kirim
-                </Button>
-              </form>
-            </Form>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
-              Kamu bisa membaca detailnya disini :
-            </p>
-          </div>
-          <div className="w-full max-w-sm space-y-2">
-            <Button variant="secondary">
-              <Link
-                className="flex items-center space-x-2"
-                download
-                target="_blank"
-                href={PDF_PROJECT_PROFILE}
-              >
-                <DownloadIcon className="h-4 w-4 text-black" />
-                <span className="text-black">Download PDF</span>
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </div>
-    </main>
+    <div className="w-full">
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)}>
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input
+                    placeholder="Enter your email address..."
+                    type="email"
+                    isError={!!errors.email}
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button
+            className="mt-5 w-full"
+            type="submit"
+            isLoading={isSubmitting}
+            variant={"default"}
+          >
+            Kirim
+          </Button>
+        </form>
+      </Form>
+    </div>
   );
 }
 
