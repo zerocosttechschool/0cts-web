@@ -1,5 +1,6 @@
-import { BrandGithub, GitCommit, Location } from "@mynaui/icons-react";
+import { GitCommit, Location } from "@mynaui/icons-react";
 import Image from "next/image";
+import { FaGithub } from "react-icons/fa6";
 import { fetchUser } from "../lib/fetchContributors";
 
 export default async function CardContributors({
@@ -20,7 +21,7 @@ export default async function CardContributors({
     console.error("Error fetching user:", error);
   }
   return (
-    <div className="grid gap-3 rounded-xl border-2 border-black px-5 py-6">
+    <div className=" grid  gap-3 rounded-xl border-2 border-black px-5 py-4">
       <div className="flex items-start justify-between">
         <figure>
           <Image
@@ -32,14 +33,14 @@ export default async function CardContributors({
           />
         </figure>
         <a href={githubUrl}>
-          <button className="flex items-center gap-2 rounded-xl border-2 border-black px-4 py-1 text-lg">
-            <BrandGithub width={20} /> <span>Follow</span>
+          <button className="text-md flex items-center gap-2 rounded-xl border-2 border-black px-2 py-1">
+            <FaGithub size={22} /> <span>Follow</span>
           </button>
         </a>
       </div>
       <div className="grid">
-        <h4 className="text-xl font-medium">
-          {name} <span className="text-lg font-normal">{user.name}</span>
+        <h4 className="text-lg font-medium">
+          {name} <span className="text-sm font-normal">{user.name}</span>
         </h4>
         <div className="flex items-center justify-start gap-1">
           <Location width={16} height={16} className="-mb-1" />{" "}

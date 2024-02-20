@@ -1,9 +1,12 @@
+import { Toaster } from "@/components/atoms/ui/toaster";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Toaster } from "@/components/atoms/ui/toaster";
 import "./globals.css";
 
 import { Navbar } from "@/components/molecules/Navbar";
+import { Footer } from "@/components/organisms";
+import { FooterData as data } from "@/constants/general";
+import Providers from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +24,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <main>{children}</main>
+        <Providers>{children}</Providers>
+        <Footer data={data} />
         <Toaster />
       </body>
     </html>

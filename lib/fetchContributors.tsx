@@ -4,7 +4,7 @@ async function fetchContributors(url: string): Promise<Array<Record<string, unkn
     headers: {
       Accept: "application/vnd.github+json",
       "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      // Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
     },
   });
 
@@ -19,7 +19,7 @@ async function fetchUser(userUrl: string): Promise<Record<string, string | numbe
     headers: {
       Accept: "application/vnd.github+json",
       "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      // Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
     },
   });
 
@@ -27,4 +27,4 @@ async function fetchUser(userUrl: string): Promise<Record<string, string | numbe
   return user;
 }
 
-export { fetchUser, fetchContributors };
+export { fetchContributors, fetchUser };
