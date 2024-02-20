@@ -7,7 +7,9 @@ export default function Home() {
     <>
       {/* <QueryClientProvider client={queryClient}> */}
       {/* <WaitList /> */}
-      <LandingPage />
+      <div className="">
+        <LandingPage />
+      </div>
       {/* </QueryClientProvider> */}
     </>
   );

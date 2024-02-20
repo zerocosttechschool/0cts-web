@@ -1,4 +1,4 @@
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/components/atoms/ui/use-toast";
 import { useCreateWaitList } from "@/services/waitlist/hooks/useCreateWaitList";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";

@@ -1,7 +1,7 @@
 import { GitCommit, Location } from "@mynaui/icons-react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa6";
-import { fetchUser } from "../lib/fetchContributors";
+import { fetchUser } from "../../../lib/fetchContributors";
 
 export default async function CardContributors({
   name,
