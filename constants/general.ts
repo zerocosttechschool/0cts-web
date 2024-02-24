@@ -3,7 +3,8 @@ export const PDF_PROJECT_PROFILE =
 
 export const FooterData = [
   {
-    kurikulum: [
+    name: "Kurikulum",
+    menu: [
       {
         title: "Dokumentasi",
         link: "https://app.zerocosttechschool.com/",
@@ -13,9 +14,13 @@ export const FooterData = [
         link: "#",
       },
     ],
-    tentangKami: [
+  },
+
+  {
+    name: "Tentang 0CTS",
+    menu: [
       {
-        title: "Tentang 0CTS",
+        title: "Tentang Kami",
         link: "/tentang-kami",
       },
       {
@@ -27,13 +32,21 @@ export const FooterData = [
         link: "/blog",
       },
     ],
-    ikutKontribusi: [
+  },
+
+  {
+    name: "Kontribusi",
+    menu: [
       {
         title: "Kontribusi",
         link: "/kontribusi",
       },
     ],
-    socialMedia: [
+  },
+
+  {
+    name: "Social Media",
+    menu: [
       {
         title: "Fanspage",
         link: "https://www.facebook.com/",
@@ -43,7 +56,11 @@ export const FooterData = [
         link: "https://www.instagram.com/",
       },
     ],
-    support: [
+  },
+
+  {
+    name: "Support",
+    menu: [
       {
         title: "Pertanyaan",
         link: "/faq",
