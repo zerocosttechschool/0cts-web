@@ -8,11 +8,8 @@ interface LinkItem {
 }
 
 interface DataFooter {
-  kurikulum: LinkItem[];
-  tentangKami: LinkItem[];
-  ikutKontribusi: LinkItem[];
-  socialMedia: LinkItem[];
-  support: LinkItem[];
+  name: string;
+  menu: LinkItem[];
 }
 
 interface FooterProps {
@@ -21,6 +18,8 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ data, className }) => {
+  console.log(data.map(item => item));
+
   return (
     <div className={`bg-slate-900 ${className}`}>
       <div className="container mx-auto w-full py-14 text-white">
@@ -39,22 +38,17 @@ const Footer: React.FC<FooterProps> = ({ data, className }) => {
               Copyright 2024 0CTS, Inc all rights reserved
             </div>
           </div>
-          <div className="col-span-8 ml-20 flex gap-3">
+          <div className="col-span-8 flex justify-end gap-10">
             {data.map((item, index) => (
-              <div key={`footer-${index}`} className="flex flex-row gap-14">
-                {Object.entries(item).map(([section, links], sectionIndex) => (
-                  <ul className="flex flex-col gap-1" key={`footer-${index}-${sectionIndex}`}>
-                    <li className="font-semibold">{section}</li>
-                    {links.map((linkItem: any, linkIndex: number) => (
-                      <li
-                        className="text-slate-500"
-                        key={`footer-${index}-${sectionIndex}-${linkIndex}`}
-                      >
-                        <Link href={linkItem.link}>{linkItem.title}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                ))}
+              <div key={index} className="flex flex-col gap-5">
+                <div className=" font-bold">{item.name}</div>
+                <div className="flex flex-col gap-2">
+                  {item.menu.map((link, index) => (
+                    <Link key={index} href={link.link}>
+                      <p className="text-sm text-slate-400 hover:text-white">{link.title}</p>
+                    </Link>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
