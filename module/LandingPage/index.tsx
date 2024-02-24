@@ -1,5 +1,5 @@
 import { Marque } from "@/components/molecules/Marque";
-import { Contributors, About } from "@/components/organisms";
+import { Contributors, About, Curriculum } from "@/components/organisms";
 import SectionHero from "@/components/organisms/Hero";
 
 export const LandingPage = () => {
@@ -19,6 +19,7 @@ export const LandingPage = () => {
         </div>
       </div>
       <About />
+      <Curriculum />
       <Contributors />
     </div>
   );
